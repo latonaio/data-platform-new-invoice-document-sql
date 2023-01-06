@@ -2,7 +2,9 @@ CREATE TABLE `data_platform_invoice_document_header_data`
 (
     `InvoiceDocument`                     int(16) NOT NULL,
     `CreationDate`                        date NOT NULL,
+    `CreationTime`                        time NOT NULL,
     `LastChangeDate`                      date NOT NULL,
+    `LastChangeTime`                      time NOT NULL,
     `SupplyChainRelationshipID`           int(16) NOT NULL,
     `SupplyChainRelationshipBillingID`    int(4) NOT NULL,
     `SupplyChainRelationshipPaymentID`    int(2) NOT NULL,
