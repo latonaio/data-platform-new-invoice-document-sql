@@ -36,7 +36,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `DocumentHeaderText`                  varchar(200) DEFAULT NULL,
     `HeaderPaymentBlockStatus`            tinyint(1) DEFAULT NULL,
     `HeaderPaymentRequisitionIsCreated`   tinyint(1) DEFAULT NULL,
-    `InvoiceDocumentIsCancelled`          tinyint(1) DEFAULT NULL,
+    `IsCancelled`                         tinyint(1) DEFAULT NULL,
 
     PRIMARY KEY (`InvoiceDocument`),
 

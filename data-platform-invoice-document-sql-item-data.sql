@@ -73,7 +73,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `CountryOfOriginLanguage`                   varchar(2) DEFAULT NULL,
     `ItemPaymentRequisitionIsCreated`   		tinyint(1) DEFAULT NULL,
     `ItemPaymentBlockStatus`            		tinyint(1) DEFAULT NULL,
-    `ItemIsCancelled`                           tinyint(1) DEFAULT NULL,
+    `IsCancelled`                               tinyint(1) DEFAULT NULL,
     
     PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`),
     
