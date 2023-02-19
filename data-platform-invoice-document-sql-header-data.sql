@@ -34,6 +34,7 @@ CREATE TABLE `data_platform_invoice_document_header_data`
     `PaymentMethod`                       varchar(1) DEFAULT NULL,
     `ExternalReferenceDocument`           varchar(35) DEFAULT NULL,
     `DocumentHeaderText`                  varchar(200) DEFAULT NULL,
+    `HeaderIsCleared`                     tinyint(1) DEFAULT NULL,
     `HeaderPaymentBlockStatus`            tinyint(1) DEFAULT NULL,
     `HeaderPaymentRequisitionIsCreated`   tinyint(1) DEFAULT NULL,
     `IsCancelled`                         tinyint(1) DEFAULT NULL,

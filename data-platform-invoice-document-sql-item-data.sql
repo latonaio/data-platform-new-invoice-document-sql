@@ -25,7 +25,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `DeliverToPlantStorageLocation`       		varchar(4) DEFAULT NULL,
     `DeliverFromPlant`                     		varchar(4) DEFAULT NULL,
     `DeliverFromPlantStorageLocation`      		varchar(4) DEFAULT NULL,
-    `ProductionPlantBusinessPartner`    		varchar(4) DEFAULT NULL,
+    `ProductionPlantBusinessPartner`    		int(12) DEFAULT NULL,
     `ProductionPlant`                   		varchar(4) DEFAULT NULL,
     `ProductionPlantStorageLocation`    		varchar(4) DEFAULT NULL,
     `ServicesRenderedDate`              		date DEFAULT NULL,
@@ -72,6 +72,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `CountryOfOrigin`                   		varchar(3) DEFAULT NULL,
     `CountryOfOriginLanguage`                   varchar(2) DEFAULT NULL,
     `ItemPaymentRequisitionIsCreated`   		tinyint(1) DEFAULT NULL,
+    `ItemIsCleared`                             tinyint(1) DEFAULT NULL,
     `ItemPaymentBlockStatus`            		tinyint(1) DEFAULT NULL,
     `IsCancelled`                               tinyint(1) DEFAULT NULL,
     
