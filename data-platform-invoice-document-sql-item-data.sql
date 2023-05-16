@@ -50,7 +50,8 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `ProductTaxClassificationBillToCountry`		varchar(1) NOT NULL,
     `ProductTaxClassificationBillFromCountry`	varchar(1) NOT NULL,
     `DefinedTaxClassification`                  varchar(1) NOT NULL,
-    `Project`                           		varchar(24) DEFAULT NULL,
+    `Project`                                   int(16) DEFAULT NULL,
+    `WBSElement`                                int(8) DEFAULT NULL,
     `OrderID`                           		int(16) DEFAULT NULL,
     `OrderItem`                         		int(6) DEFAULT NULL,
     `OrderType`                         		varchar(3) DEFAULT NULL,
@@ -71,6 +72,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     `TaxRate`                           		float(6) DEFAULT NULL,
     `CountryOfOrigin`                   		varchar(3) DEFAULT NULL,
     `CountryOfOriginLanguage`                   varchar(2) DEFAULT NULL,
+    `Equipment`                                 int(20) DEFAULT NULL,
     `ItemPaymentRequisitionIsCreated`   		tinyint(1) DEFAULT NULL,
     `ItemIsCleared`                             tinyint(1) DEFAULT NULL,
     `ItemPaymentBlockStatus`            		tinyint(1) DEFAULT NULL,
@@ -92,11 +94,13 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataItemWeightUnit_fk` FOREIGN KEY (`ItemWeightUnit`) REFERENCES `data_platform_quantity_unit_quantity_unit_data` (`QuantityUnit`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataTransactionCurrency_fk` FOREIGN KEY (`TransactionCurrency`) REFERENCES `data_platform_currency_currency_data` (`Currency`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataProject_fk` FOREIGN KEY (`Project`) REFERENCES `data_platform_project_project_data` (`Project`),
+    CONSTRAINT `DataPlatformInvoiceDocumentItemDataWBSElement_fk` FOREIGN KEY (`Project`, `WBSElement`) REFERENCES `data_platform_project_wbs_element_data` (`Project`, `WBSElement`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataOrderItem_fk` FOREIGN KEY (`OrderID`, `OrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataDeliveryDocumentItem_fk` FOREIGN KEY (`DeliveryDocument`, `DeliveryDocumentItem`) REFERENCES `data_platform_delivery_document_item_data` (`DeliveryDocument`, `DeliveryDocumentItem`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataTaxCode_fk` FOREIGN KEY (`TaxCode`) REFERENCES `data_platform_tax_code_tax_code_data` (`TaxCode`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataCountryOfOrigin_fk` FOREIGN KEY (`CountryOfOrigin`) REFERENCES `data_platform_country_country_data` (`Country`),
-    CONSTRAINT `DataPlatformInvoiceDocumentItemDataCountryOfOriginLanguage_fk` FOREIGN KEY (`CountryOfOriginLanguage`) REFERENCES `data_platform_language_language_data` (`Language`)
+    CONSTRAINT `DataPlatformInvoiceDocumentItemDataCountryOfOriginLanguage_fk` FOREIGN KEY (`CountryOfOriginLanguage`) REFERENCES `data_platform_language_language_data` (`Language`),
+    CONSTRAINT `DataPlatformInvoiceDocumentItemDataEquipment_fk` FOREIGN KEY (`Equipment`) REFERENCES `data_platform_equipment_master_general_data` (`Equipment`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
