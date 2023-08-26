@@ -98,7 +98,7 @@ CREATE TABLE `data_platform_invoice_document_item_data`
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataWBSElement_fk` FOREIGN KEY (`Project`, `WBSElement`) REFERENCES `data_platform_project_wbs_element_data` (`Project`, `WBSElement`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataOrderItem_fk` FOREIGN KEY (`OrderID`, `OrderItem`) REFERENCES `data_platform_orders_item_data` (`OrderID`, `OrderItem`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataDeliveryDocumentItem_fk` FOREIGN KEY (`DeliveryDocument`, `DeliveryDocumentItem`) REFERENCES `data_platform_delivery_document_item_data` (`DeliveryDocument`, `DeliveryDocumentItem`),
-    CONSTRAINT `DataPlatformInvoiceDocumentItemDataTaxCode_fk` FOREIGN KEY (`TaxCode`) REFERENCES `data_platform_tax_code_tax_code_data` (`TaxCode`),
+--  CONSTRAINT `DataPlatformInvoiceDocumentItemDataTaxCode_fk` FOREIGN KEY (`TaxCode`) REFERENCES `data_platform_tax_code_tax_code_data` (`TaxCode`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataCountryOfOrigin_fk` FOREIGN KEY (`CountryOfOrigin`) REFERENCES `data_platform_country_country_data` (`Country`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataCountryOfOriginLanguage_fk` FOREIGN KEY (`CountryOfOriginLanguage`) REFERENCES `data_platform_language_language_data` (`Language`),
     CONSTRAINT `DataPlatformInvoiceDocumentItemDataEquipment_fk` FOREIGN KEY (`Equipment`) REFERENCES `data_platform_equipment_master_general_data` (`Equipment`)
