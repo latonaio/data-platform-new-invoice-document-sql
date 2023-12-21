@@ -11,9 +11,9 @@ CREATE TABLE `data_platform_invoice_document_header_doc_data`
  
     PRIMARY KEY (`InvoiceDocument`, `DocType`, `DocVersionID`, `DocID`),
     
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDocData_fk` FOREIGN KEY (`InvoiceDocument`) REFERENCES `data_platform_invoice_document_header_data` (`InvoiceDocument`),
-    CONSTRAINT `DataPlatformInvoiceDocumentHeaderDocDataDocType_fk` FOREIGN KEY (`DocType`) REFERENCES `data_platform_doc_type_doc_type_data` (`DocType`),
-    -- CONSTRAINT `DataPlatformInvoiceDocumentHeaderDocDataDocIssuerBusinessPartner_fk` FOREIGN KEY (`DocIssuerBusinessPartner`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`)  too long
+    CONSTRAINT `DPFMInvoiceDocumentHeaderDocData_fk` FOREIGN KEY (`InvoiceDocument`) REFERENCES `data_platform_invoice_document_header_data` (`InvoiceDocument`),
+    CONSTRAINT `DPFMInvoiceDocumentHeaderDocDataDocType_fk` FOREIGN KEY (`DocType`) REFERENCES `data_platform_doc_type_doc_type_data` (`DocType`),
+    CONSTRAINT `DPFMInvoiceDocumentHeaderDocDataDocIssuerBusinessPartner_fk` FOREIGN KEY (`DocIssuerBusinessPartner`) REFERENCES `data_platform_business_partner_general_data` (`BusinessPartner`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

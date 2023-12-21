@@ -27,8 +27,8 @@ CREATE TABLE `data_platform_invoice_document_item_pricing_element_data`
   
   PRIMARY KEY (`InvoiceDocument`, `InvoiceDocumentItem`, `PricingProcedureCounter`),
     
-  CONSTRAINT `DataPlatformInvoiceDocumentItemPricingElementData_fk` FOREIGN KEY (`InvoiceDocument`, `InvoiceDocumentItem`) REFERENCES `data_platform_invoice_document_item_data` (`InvoiceDocument`, `InvoiceDocumentItem`),
-  CONSTRAINT `DataPlatformInvoiceDocumentItemPricingElementDataSCRID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `Buyer`, `Seller`) REFERENCES `data_platform_scr_general_data` (`SupplyChainRelationshipID`, `Buyer`, `Seller`)
+  CONSTRAINT `DPFMInvoiceDocumentItemPricingElementData_fk` FOREIGN KEY (`InvoiceDocument`, `InvoiceDocumentItem`) REFERENCES `data_platform_invoice_document_item_data` (`InvoiceDocument`, `InvoiceDocumentItem`),
+  CONSTRAINT `DPFMInvoiceDocumentItemPricingElementDataSCRID_fk` FOREIGN KEY (`SupplyChainRelationshipID`, `Buyer`, `Seller`) REFERENCES `data_platform_scr_general_data` (`SupplyChainRelationshipID`, `Buyer`, `Seller`)
 
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
