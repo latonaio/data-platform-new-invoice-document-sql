@@ -14,6 +14,7 @@ data-platform-invoice-document-sql には、sqlの設定ファイルとして、
 * data-platform-invoice-document-sql-item-doc-data.sql（データ連携基盤 請求伝票 - 明細文書データ）
 * data-platform-invoice-document-sql-item-pricing-element-data.sql（データ連携基盤 請求伝票 - 明細価格決定要素データ）
 * data-platform-invoice-document-sql-partner-data.sql（データ連携基盤 請求伝票 - 取引先データ）
+* data-platform-invoice-document-sql-plant-data.sql（データ連携基盤 請求伝票 - プラントデータ）
 * data-platform-invoice-document-sql-address-data.sql（データ連携基盤 請求伝票 - 住所データ）
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
